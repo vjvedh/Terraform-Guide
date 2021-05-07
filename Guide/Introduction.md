@@ -1,6 +1,6 @@
-# Hashicorp Terraform: 
+# Hashicorp Terraform
 
-It is a **[Infrastructure as Code](Guide/Infrastructure_as_Code.md)** *(IaC)* tool used for provisioning the OS/Data Center.
+It is a **[Infrastructure as Code](Infrastructure_as_Code.md)** *(IaC)* tool used for provisioning the OS/Data Center.
 
 ## Features:
 - Consistent and Predictable: Every time the code is deployed the resulted environment will always be same.
@@ -16,7 +16,9 @@ It is a **[Infrastructure as Code](Guide/Infrastructure_as_Code.md)** *(IaC)* to
 - Resources are the services which are provided by the providers.
 - Examples of some resources are: EC2(AWS), EBS(AWS), Load Balancer.
 
-To check the Terraform version.
+**To check the Terraform version.**
 ```
 terraform version
 ```
+
+### [Variables and Output](Variables_and_PrintOutput.md) in Terraform.

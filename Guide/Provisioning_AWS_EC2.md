@@ -1,14 +1,15 @@
-# Provisioning AWS EC2 with Terraform.
+# Provisioning AWS EC2 with Terraform
 
-- Provider: AWS
+- **Provider**: *AWS* (aws)
+	- Arguments:
 		- Access Key: Username
 		- Secret Key: Password
 		- Region: Which region to work on.
 
-- Resources: 
-		- EC2 Instance.
-				- AMI Used = "ami-0a9d27a9f4f5c0efc"
-				- Instance Type = t2.micro
+- **Resource**: *EC2 Instance* (aws_instance)
+	- Arguments:
+		- AMI Used = "ami-0a9d27a9f4f5c0efc"
+		- Instance Type = t2.micro
 
 ## Steps to create a code for the above setup:
 1. Create a file.
@@ -32,8 +33,8 @@
 	}
 	``` 
 	Syntax Info: 
-	provider "Provider Name"{}
-	resource "Resource Name" "Unique Resource Tag"{}
+	- provider "Provider Name"{arguments}
+	- resource "Resource Name" "Unique Resource Tag"{arguments}
 	
 3. Initializing the Terraform. The following command will initialize the terraform and look for the file with ".tf" extension and download the required plugins for provider if not present.
 	```
