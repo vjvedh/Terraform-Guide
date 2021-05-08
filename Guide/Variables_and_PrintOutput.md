@@ -32,11 +32,11 @@ Syntax Info:
 - output " Output Name" {
 	value = "\${var.VariableName}"
 	} 
-	"\${var.VariableName}" -> Inside the string ${} helps to make a reference to variables and var. tells that this is a user defined variable type.
+	"\${var.VariableName}" -> Inside the string ${} helps to make a reference to variables and var. is used to call the user defined variable we created.
 	
 # Steps: 
 1. Create a file with .tf extension and add the above syntax in it to create a variable and print it.
-2. Run the terraform code.
+2. Run the terraform code and enter "yes" when asked for input.
 	```
 	terraform apply
 	```
