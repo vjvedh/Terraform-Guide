@@ -30,7 +30,7 @@
 			- Instance ID = Where you need to attach the volume.
 	- *Null-Resource* -> To connecting and running commands in Instance without affecting the infrastructure.
 
-### Go through how to use [Connection](Connection.md), [Provisioners](Provisioners.md), [Null-Resource](Null_Resource.md) in Terraform.
+### Go through how to use [Connection](../Connection.md), [Provisioners](../Provisioners.md), [Null-Resource](../Null_Resource.md) in Terraform.
 
 ## Steps to create a code for the above setup:
 1. Create a file.
@@ -169,4 +169,4 @@ Run the below commands after adding the code in main file.
 
 *To solve the above case, we will order the execution plan accordingly.
 See the next guide for solving it.*
-#### [Load Order and Organizing Terraform Code](Load_Order_and_Organizing_Terraform_Code.md)
+#### [Load Order and Organizing Terraform Code](../Load_Order_and_Organizing_Terraform_Code.md)
