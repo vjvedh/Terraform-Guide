@@ -30,6 +30,11 @@ terraform version
 terraform init
 ```
 
+**To validate the Terraform code syntax.**
+```
+terraform validate
+```
+
 **To check and verify the code plan.**
 ```
 terraform plan
@@ -45,6 +50,9 @@ terraform apply
 terraform destroy
 ```
 
-### [Variables and Output](Variables_and_PrintOutput.md) in Terraform.
-
-### [Provisioners, Connection and Null-Resource](Connection_And_Provisioners_AND_Null-Resource.md) in Terraform.
+1. ## [Variables and Output](Variables_and_PrintOutput.md) in Terraform.
+2. ## [Terraform State](Terraform_State.md)
+3. ## [Connection](Connection.md) in Terraform.
+4. ## [Provisioners](Provisioners.md) in Terraform.
+5. ## [Null-Resource](Null_Resource.md) in Terraform.
+6. ## [Load Order and Organizing Terraform Code](Load_Order_and_Organizing_Terraform_Code.md)

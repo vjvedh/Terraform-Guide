@@ -53,7 +53,9 @@
 	```
 	terraform plan
 	```
-5. After verifying the plan we will apply it. Apply will check if provider is there i.e. initialize, check the plan i.e. plan and run it.
+	*EXECUTIONAL PLAN*:
+		- Create a EC2 Instance
+1. After verifying the plan we will apply it. Apply will check if provider is there i.e. initialize, check the plan i.e. plan and run it.
 	```
 	terraform apply
 	```

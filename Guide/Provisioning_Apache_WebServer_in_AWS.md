@@ -30,7 +30,7 @@
 			- Instance ID = Where you need to attach the volume.
 	- *Null-Resource* -> To connecting and running commands in Instance without affecting the infrastructure.
 
-### Go through how to use [Provisioners, Connection and Null-Resource](Connection_And_Provisioners_AND_Null-Resource.md) in Terraform.
+### Go through how to use [Connection](Connection.md), [Provisioners](Provisioners.md), [Null-Resource](Null_Resource.md) in Terraform.
 
 ## Steps to create a code for the above setup:
 1. Create a file.
@@ -108,7 +108,30 @@
 		 volume_id = aws_ebs_volume.NewEBS_Volume.id
 		 instance_id = aws_instance.WebServer.id
 	}
-
+	``` 
+	Syntax Info: 
+	- Here we have provided access_key and secret_key using shared file credentials which is safer than the static credentials.
+	
+3. Initializing the Terraform Code. 
+	```
+	terraform init
+	```
+4. Checking and verifying the plan.
+	```
+	terraform plan
+	```
+	*EXECUTIONAL PLAN*:
+		- Create a Security Group
+		- Create a EC2 Instance
+		- Create a EBS Volume
+		- Attach Volume to Instance.
+5. Applying the plan without typing yes for verification.
+	```
+	terraform apply --auto-approve
+	```
+	
+6. To Format and Mount the EBS volume to /var/www/html folder, after running the above code add the below code later and re-run. Else if adding and running whole code together the execution plan will change and it will give a error.
+	```
 	resource "null_resource" "Formatting" {
 		 connection {
 			 type = "ssh"
@@ -131,18 +154,19 @@
 	 	 }
 	}
 	``` 
-	Syntax Info: 
-	- Here we have provided access_key and secret_key using shared file credentials which is safer than the static credentials.
 	
-3. Initializing the Terraform Code. 
-	```
-	terraform init
-	```
-4. Checking and verifying the plan.
-	```
-	terraform plan
-	```
-5. Applying the plan without typing yes for verification.
-	```
-	terraform apply --auto-approve
-	```
+	
+	Execution Plan if we added and executed whole code together.
+		- Create a Security Group
+		- Create a EC2 Instance
+		- Create a EBS Volume
+		- Running the Null_Resource (if it is executed before attaching the volume it will fail).
+		- Attach Volume to Instance
+
+Run the below commands after adding the code in main file.
+`terraform init`  -> as null-resource has its own provider.
+`terraform apply` -> to execute the changes.
+
+*To solve the above case, we will order the execution plan accordingly.
+See the next guide for solving it.*
+#### [Load Order and Organizing Terraform Code](Load_Order_and_Organizing_Terraform_Code.md)

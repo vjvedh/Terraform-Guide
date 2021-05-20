@@ -40,3 +40,5 @@ Syntax Info:
 	```
 	terraform apply
 	```
+
+Terraform Output will pick the data from the `.tfstate` state file created.

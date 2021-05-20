@@ -80,6 +80,10 @@
 	```
 	terraform plan
 	```
+	*EXECUTIONAL PLAN*:
+		- Create a EC2 Instance
+		- Create a EBS Volume
+		- Attach Volume to Instance
 5. Applying the plan.
 	```
 	terraform apply
